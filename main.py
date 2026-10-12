@@ -6,7 +6,7 @@ if len(sys.argv) != 2:
 
 with open(sys.argv[1], "r", encoding="utf-8") as f: #with Per evitare che read se solleva eccezione non chiude la stream
     testo = f.read()    #Torna una stringa
-    print(f"Source File: {testo}")
+    print(f"Source File:\n{testo}\n")
 
 COMMANDS = ['>', '<', '+', '-', '.', '[', ']']
 
@@ -52,8 +52,14 @@ def exec (testo):
             case '.':
                 print(chr(memory[pointer]), end = '')
                 programCounter += 1
+    print('\n')
+    print("First 20 Memory Cells: ")
+    for cell in range(20):
+        print(f"{memory[cell]}, ", end= '')
 
 exec(testo)
+
+
 
                             
 
