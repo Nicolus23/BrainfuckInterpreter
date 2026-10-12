@@ -8,7 +8,7 @@ with open(sys.argv[1], "r", encoding="utf-8") as f: #with Per evitare che read s
     testo = f.read()    #Torna una stringa
     print(f"Source File: {testo}")
 
-COMMANDS = ['>', '<', '+', '-', '.', ',', '[', ']']
+COMMANDS = ['>', '<', '+', '-', '.', '[', ']']
 
 def exec (testo):
     memory = [0] * 30000
