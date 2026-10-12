@@ -6,7 +6,7 @@ if len(sys.argv) != 2:
 
 with open(sys.argv[1], "r", encoding="utf-8") as f: #with Per evitare che read se solleva eccezione non chiude la stream
     testo = f.read()    #Torna una stringa
-    print(f"Source File:{testo}")
+    print(f"Source File: {testo}")
 
 COMMANDS = ['>', '<', '+', '-', '.', ',', '[', ']']
 
